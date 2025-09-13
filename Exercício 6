@@ -1,0 +1,18 @@
+fun main() {
+    val valores = mutableListOf<Int>()
+
+    // Lendo 4 valores do usuário
+    for (i in 1..4) {
+        println("Digite o $iº valor:")
+        val valor = readLine()!!.toInt()
+        valores.add(valor)
+    }
+
+    val primeiro = valores.first()       // Primeiro valor da lista
+    val ultimo = valores.last()          // Último valor da lista
+    val maior = valores.maxOrNull()!!    // Maior valor da lista
+
+    println("Primeiro valor: $primeiro")
+    println("Último valor: $ultimo")
+    println("Maior valor: $maior")
+}
