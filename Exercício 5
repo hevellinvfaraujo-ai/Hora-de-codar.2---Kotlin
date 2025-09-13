@@ -1,0 +1,19 @@
+fun main() {
+    val valores = mutableListOf<Int>()
+
+    // Lendo 6 valores do usuário
+    for (i in 1..6) {
+        println("Digite o $iº valor:")
+        val valor = readLine()!!.toInt()
+        valores.add(valor)
+    }
+
+    // Exibindo os valores informados
+    println("Os valores informados foram: $valores")
+
+    // Calculando a média
+    val soma = valores.sum()
+    val media = soma.toDouble() / valores.size
+
+    println("A média aritmética dos valores é: $media")
+}
