@@ -1,0 +1,12 @@
+fun main() {
+    print("Digite um número: ")
+    val numero = readLine()!!.toDouble()
+
+    if (numero > 0) {
+        println("O número $numero é positivo.")
+    } else if (numero < 0) {
+        println("O número $numero é negativo.")
+    } else {
+        println("O número é zero.")
+    }
+}
