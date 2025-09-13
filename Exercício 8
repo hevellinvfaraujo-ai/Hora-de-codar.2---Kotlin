@@ -1,0 +1,29 @@
+fun main() {
+    val valores = mutableListOf<Double>()
+
+    // Lendo 4 números do usuário
+    for (i in 1..4) {
+        println("Digite o $iº valor (entre 0 e 10):")
+        val valor = readLine()!!.toDouble()
+
+        // Verificando se está dentro do intervalo permitido
+        if (valor > 0 && valor < 10) {
+            valores.add(valor)
+        } else {
+            println("Valor inválido. Ele deve ser maior que 0 e menor que 10.")
+            return // Encerra o programa se algum valor for inválido
+        }
+    }
+
+    // Calculando a média
+    val media = valores.sum() / valores.size
+
+    println("A média é: $media")
+
+    // Verificando a média para exibir a mensagem
+    if (media > 5) {
+        println("Você passou no teste")
+    } else {
+        println("Tente novamente")
+    }
+}
