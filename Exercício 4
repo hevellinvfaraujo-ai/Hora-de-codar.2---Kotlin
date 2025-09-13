@@ -1,0 +1,24 @@
+fun main() {
+    println("Digite o primeiro valor:")
+    val valor1 = readLine()!!.toInt()
+
+    println("Digite o segundo valor:")
+    val valor2 = readLine()!!.toInt()
+
+    println("Digite o terceiro valor:")
+    val valor3 = readLine()!!.toInt()
+
+    // Encontrando o menor valor
+    val menor = if (valor1 < valor2 && valor1 < valor3) {
+        valor1
+    } else if (valor2 < valor1 && valor2 < valor3) {
+        valor2
+    } else {
+        valor3
+    }
+
+    // Soma dos dois maiores = soma total menos o menor
+    val somaDoisMaiores = valor1 + valor2 + valor3 - menor
+
+    println("A soma dos dois maiores valores é: $somaDoisMaiores")
+}
