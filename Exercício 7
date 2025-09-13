@@ -1,0 +1,22 @@
+fun main() {
+    val valores = mutableListOf<Int>()
+    var soma = 0
+
+    // Lendo 6 valores do usuário
+    for (i in 1..6) {
+        println("Digite o $iº valor:")
+        val valor = readLine()!!.toInt()
+        valores.add(valor)
+
+        // Somar somente valores menores que 72
+        if (valor < 72) {
+            soma += valor
+        }
+    }
+
+    // Exibindo todos os valores informados
+    println("Valores informados: $valores")
+
+    // Exibindo a soma dos valores menores que 72
+    println("Soma dos valores menores que 72: $soma")
+}
