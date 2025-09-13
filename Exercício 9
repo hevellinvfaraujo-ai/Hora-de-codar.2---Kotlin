@@ -1,0 +1,14 @@
+fun main() {
+    println("Digite o ano de nascimento:")
+    val anoNascimento = readLine()!!.toInt()
+
+    val anoAtual = 2025 // você pode atualizar para o ano atual ou usar Calendar
+
+    val idade = anoAtual - anoNascimento
+
+    if (idade >= 16) {
+        println("Você pode votar este ano.")
+    } else {
+        println("Você não pode votar este ano.")
+    }
+}
